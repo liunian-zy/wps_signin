@@ -1,6 +1,7 @@
 invite_userid = 197772600
 
 import requests
+import time
 
 sids = [
     "V02StVuaNcoKrZ3BuvJQ1FcFS_xnG2k00af250d4002664c02f",
@@ -35,3 +36,4 @@ sids = [
 invite_url = 'http://zt.wps.cn/2018/clock_in/api/invite'
 for i in sids:
     requests.post(invite_url, headers={'sid': i}, data={'invite_userid': invite_userid})
+    time.sleep(1)
